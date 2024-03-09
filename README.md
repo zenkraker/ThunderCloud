@@ -1,4 +1,8 @@
-# ThunderCloud A cloud solution but... self-hosted ## Goals:
+# ThunderCloud
+
+> #### A cloud solution but... self-hosted
+
+## Goals:
 
 <ol>
   <li>Secure</li>
@@ -35,4 +39,9 @@
     <ol>
     <li>Postgresql-16</li>
     </ol>
+<li>CI-CD</li>
+<ol>
+<li>Docker</li>
+<li>Github Actions</li>
+</ol>
 </ol>
