@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThunderServer", "ThunderServer", "{88F65589-ED24-4154-82F2-775B2847E89E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThunderServer.API", "ThunderServer\ThunderServer.API\ThunderServer.API.csproj", "{345537FE-6B2C-4666-BED8-68247D3B6E18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThunderServer.Tests", "ThunderServer\ThunderServer.Tests\ThunderServer.Tests.csproj", "{A8BC16D3-0A67-47BF-BC20-C43F60602315}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{345537FE-6B2C-4666-BED8-68247D3B6E18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{345537FE-6B2C-4666-BED8-68247D3B6E18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{345537FE-6B2C-4666-BED8-68247D3B6E18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{345537FE-6B2C-4666-BED8-68247D3B6E18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8BC16D3-0A67-47BF-BC20-C43F60602315}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8BC16D3-0A67-47BF-BC20-C43F60602315}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8BC16D3-0A67-47BF-BC20-C43F60602315}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8BC16D3-0A67-47BF-BC20-C43F60602315}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C9E1699-4247-4FED-AC8E-D41B573C019D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C9E1699-4247-4FED-AC8E-D41B573C019D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C9E1699-4247-4FED-AC8E-D41B573C019D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C9E1699-4247-4FED-AC8E-D41B573C019D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{345537FE-6B2C-4666-BED8-68247D3B6E18} = {88F65589-ED24-4154-82F2-775B2847E89E}
+		{A8BC16D3-0A67-47BF-BC20-C43F60602315} = {88F65589-ED24-4154-82F2-775B2847E89E}
+		{2C9E1699-4247-4FED-AC8E-D41B573C019D} = {D5428D74-AD99-4CBB-84CA-2D05EFE8A2F5}
+	EndGlobalSection
+EndGlobal
