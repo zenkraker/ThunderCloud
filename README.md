@@ -1,6 +1,6 @@
 # ThunderCloud
 
-> ## A cloud solution but... self-hosted
+> ## A cloud storage solution but... self-hosted
 
 ## Goals:
 
