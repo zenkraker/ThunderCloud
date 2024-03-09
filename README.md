@@ -1,6 +1,15 @@
 # ThunderCloud
 
-> #### A cloud solution but... self-hosted
+ > #### A cloud solution but... self-hosted
+
+<p align="center"> 
+  <br/>  
+ 
+  <br/>  
+  <a href="https://opensource.org/license/agpl-v3"><img src="https://img.shields.io/badge/License-AGPL_v3-blue.svg?color=3F51B5&style=for-the-badge&label=License&logoColor=000000&labelColor=ececec" alt="License: AGPLv3"></a>
+  <br/>  
+  <br/>   
+</p>
 
 ## Goals:
 
