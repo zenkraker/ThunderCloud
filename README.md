@@ -62,7 +62,7 @@
   <br/> 
 </p>
 
-## Contributors
+### Contributors
 
 <a href="https://github.com/zenkraker/ThunderCloud/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=zenkraker/ThunderCloud" />
