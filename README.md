@@ -45,3 +45,14 @@
 <li>Github Actions</li>
 </ol>
 </ol>
+
+## Contributors
+
+<a href="https://github.com/zenkraker/ThunderCloud/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=zenkraker/ThunderCloud" />
+</a>
+
+## Star History
+
+[![Star History](https://api.lucabubi.me/chart?username=zenkraker&repository=ThunderCloud&color=yellow)](https://github.com/lucabubi/star-history)
+
