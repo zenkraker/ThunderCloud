@@ -1,15 +1,6 @@
 # ThunderCloud
 
- > #### A cloud solution but... self-hosted
-
-<p align="center"> 
-  <br/>  
- 
-  <br/>  
-  <a href="https://opensource.org/license/agpl-v3"><img src="https://img.shields.io/badge/License-AGPL_v3-blue.svg?color=3F51B5&style=for-the-badge&label=License&logoColor=000000&labelColor=ececec" alt="License: AGPLv3"></a>
-  <br/>  
-  <br/>   
-</p>
+> ## A cloud solution but... self-hosted
 
 ## Goals:
 
@@ -55,9 +46,24 @@
 </ol>
 </ol>
 
+### Disclaimer
+
+- ⚠️ The project is under **very active** development.
+- ⚠️ Expect bugs and breaking changes.
+- ⚠️ **Do not use the app as the only way to store your files.**
+- ⚠️ Always follow [3-2-1](https://www.backblaze.com/blog/the-3-2-1-backup-strategy/) backup plan for your precious files!
+
+---
+### License
+<br/>  
+<p align="center"> 
+  <br/>  
+  <a href="https://opensource.org/license/agpl-v3"><img src="https://img.shields.io/badge/License-AGPL_v3-blue.svg?color=3F51B5&style=for-the-badge&label=License&logoColor=000000&labelColor=ececec" alt="License: AGPLv3"></a>
+  <br/> 
+</p>
+
 ## Contributors
 
 <a href="https://github.com/zenkraker/ThunderCloud/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=zenkraker/ThunderCloud" />
 </a>
-
