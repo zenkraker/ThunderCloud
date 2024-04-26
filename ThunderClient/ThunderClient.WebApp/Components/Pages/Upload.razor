@@ -1,0 +1,38 @@
+﻿@page "/upload"
+
+<h3>Upload</h3>
+
+@if (errors.Count > 0)
+{
+	<h2>Errors</h2>
+	<ul class="text-danger">
+		@foreach (var error in errors)
+		{
+			<li>@error</li>
+		}
+	</ul>
+}
+
+
+<PageTitle>Upload</PageTitle>
+
+<InputFile OnChange="@LoadFiles" multiple />
+
+@code {
+
+	//TODO: Set single uploadable Filesize and maxUploadableFilesAtOnce to appSettings, at the moment it is 50MB
+	private long maxFileSize = 1024 * 1024 * 50;
+	private int maxUploadableFilesAtOnce = 10;
+	private List<string> errors = new();
+
+	private void LoadFiles(InputFileChangeEventArgs e)
+	{
+		errors.Clear();
+
+		if (e.FileCount > maxUploadableFilesAtOnce)
+		{
+			errors.Add($"The amount of files you want to upload exceeds the maximum amount of: {maxUploadableFilesAtOnce}");
+			return;
+		}
+	}
+}
