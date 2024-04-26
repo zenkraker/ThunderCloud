@@ -2,7 +2,7 @@
 
 namespace ThunderServer.API.Endpoints.Files
 {
-    public class FileUploadRequest
+    public sealed record FileUploadRequest
     {
         [FromForm]
         public required List<IFormFile> Files { get; init; }
