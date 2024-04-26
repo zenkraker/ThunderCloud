@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThunderServer.Infrastructur
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThunderServer.IntegrationTests", "ThunderServer\ThunderServer.IntegrationTests\ThunderServer.IntegrationTests.csproj", "{A2B00782-76BE-4A63-9EDF-DE7C2979C545}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThunderClient.WebApp", "ThunderClient\ThunderClient.WebApp\ThunderClient.WebApp.csproj", "{C61325C8-D92F-4E12-9F18-B09EE2200EA9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{A2B00782-76BE-4A63-9EDF-DE7C2979C545}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2B00782-76BE-4A63-9EDF-DE7C2979C545}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2B00782-76BE-4A63-9EDF-DE7C2979C545}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C61325C8-D92F-4E12-9F18-B09EE2200EA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C61325C8-D92F-4E12-9F18-B09EE2200EA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C61325C8-D92F-4E12-9F18-B09EE2200EA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C61325C8-D92F-4E12-9F18-B09EE2200EA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +74,7 @@ Global
 		{3E749B07-CA94-4F34-BB87-9EEEBCEEA0EE} = {BF878981-7155-480C-B64F-911DB2D07931}
 		{C5A03BBC-6828-4488-8D2F-70074CECC07F} = {BF878981-7155-480C-B64F-911DB2D07931}
 		{A2B00782-76BE-4A63-9EDF-DE7C2979C545} = {BF878981-7155-480C-B64F-911DB2D07931}
+		{C61325C8-D92F-4E12-9F18-B09EE2200EA9} = {1B63BE5F-EB36-4A89-BFE6-32DEA2A7BA18}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6863FEE8-A90E-4D07-AE4A-BA218F67964E}
