@@ -8,6 +8,8 @@ services:
       dockerfile: ThunderServer/ThunderServer.API/Dockerfile
     depends_on:
       - db
+    volumes:
+      - "C:/TestFiles:/app/uploads"     
 
   db:
     image: postgres
