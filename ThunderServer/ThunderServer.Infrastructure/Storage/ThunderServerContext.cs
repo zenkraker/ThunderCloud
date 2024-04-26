@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ThunderServer.API.Domain;
+using ThunderServer.Models.Domain;
 
-namespace ThunderServer.API.Storage
+namespace ThunderServer.Infratructure.Storage
 {
     public class ThunderServerContext : DbContext
     {

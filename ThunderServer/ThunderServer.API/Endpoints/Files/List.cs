@@ -1,8 +1,8 @@
 ﻿using Ardalis.ApiEndpoints;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
-using ThunderServer.API.Domain;
-using ThunderServer.API.Storage;
+using ThunderServer.Infratructure.Storage;
+using ThunderServer.Models.Domain;
 
 namespace ThunderServer.API.Endpoints.Files
 {

@@ -1,4 +1,4 @@
-﻿namespace ThunderServer.API.Domain
+﻿namespace ThunderServer.Models.Domain
 {
     public class RecycleBinItem
     {

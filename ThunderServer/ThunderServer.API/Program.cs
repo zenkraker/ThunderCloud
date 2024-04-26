@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using ThunderServer.API.Storage;
+using ThunderServer.Infratructure.Storage;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,7 +15,7 @@ builder.Services.AddSwaggerGen(c =>
     c.EnableAnnotations();
 });
 
-var x = builder.Configuration;
+builder.Services.AddLogging();
 
 builder.Services.AddDbContext<ThunderServerContext>(options =>
 {
@@ -36,8 +36,3 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}

@@ -2,8 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Swashbuckle.AspNetCore.Annotations;
-using ThunderServer.API.Domain;
-using ThunderServer.API.Storage;
+using System.Security.Cryptography;
+using ThunderServer.Infratructure.Storage;
+using ThunderServer.Models.Domain;
 
 namespace ThunderServer.API.Endpoints.Files
 {
@@ -70,14 +71,14 @@ namespace ThunderServer.API.Endpoints.Files
                             var ownerGuid = Guid.Parse("B3C919D3-5410-4C0F-9D5A-3EA01A006EF5");
                             var parentFolderGuid = Guid.Parse("B3C919D3-5410-4C0F-9D5A-3EA01A006EF6");
 
-
-
                             ThunderFile thunderFile = new ThunderFile(fileName, file.ContentType, file.Length, filePath, ownerGuid, "", parentFolderGuid);
 
                             await _serverContext.Files.AddAsync(thunderFile, cancellationToken);
                             await _serverContext.SaveChangesAsync(cancellationToken);
 
                             await file.CopyToAsync(stream, cancellationToken);
+
+                            await CalculateMD5(fileName);
                         }
 
                         filePaths.Add(filePath);
@@ -92,6 +93,18 @@ namespace ThunderServer.API.Endpoints.Files
             {
                 // Log the exception
                 return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        private static async Task<string> CalculateMD5(string filename)
+        {
+            using (var md5 = MD5.Create())
+            {
+                using (var stream = System.IO.File.OpenRead(filename))
+                {
+                    var hash = await md5.ComputeHashAsync(stream);
+                    return BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
+                }
             }
         }
     }
