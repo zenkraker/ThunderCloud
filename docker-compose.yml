@@ -9,7 +9,7 @@ services:
     depends_on:
       - db
     volumes:
-      - "C:/TestFiles:/app/uploads"       
+      - "C:/TestFiles:/app/uploads"    
 
   thunderclient.webapp:
     image: ${DOCKER_REGISTRY-}thunderclientwebapp
