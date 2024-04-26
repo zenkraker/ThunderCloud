@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using System.Reflection;
+using ThunderServer.API.Configurations;
+using ThunderServer.API.Services;
+using ThunderServer.API.Services.Interfaces;
 using ThunderServer.Infratructure.Storage;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,12 +19,20 @@ builder.Services.AddSwaggerGen(c =>
     c.EnableAnnotations();
 });
 
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
 builder.Services.AddLogging();
+
+builder.Services.AddOptions<StorageVolumesConfiguration>().Bind(builder.Configuration.GetSection("Storage-Volumes")).ValidateOnStart();
 
 builder.Services.AddDbContext<ThunderServerContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+builder.Services.AddTransient<IFileManager, FileManager>();
+
+builder.Services.AddHostedService<FileStorer>();
 
 var app = builder.Build();
 
