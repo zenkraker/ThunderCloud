@@ -4,7 +4,6 @@ using FluentResults.Extensions.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Annotations;
-using System.Security.Cryptography;
 using ThunderServer.API.Configurations;
 using ThunderServer.API.DTOs;
 using ThunderServer.API.Services.Interfaces;
@@ -12,7 +11,7 @@ using ThunderServer.Models.Domain;
 
 namespace ThunderServer.API.Endpoints.Files
 {
-    public class Create : EndpointBaseAsync.WithRequest<FileUploadRequest>.WithActionResult<FileUploadResponse>
+	public class Create : EndpointBaseAsync.WithRequest<FileUploadRequest>.WithActionResult<FileUploadResponse>
     {
         private readonly StorageVolumesConfiguration _storageConfiguration;
         private readonly ILogger<Create> _logger;
@@ -52,7 +51,7 @@ namespace ThunderServer.API.Endpoints.Files
 
                 var results = await _fileManager.AddFileToFolder(request.Files, cancellationToken, uploadDirectory);
 
-                return Ok(results.Map(_mapper.Map<ThunderFileDto>).ToActionResult());
+                return results.ToActionResult();
             }
             catch (Exception ex)
             {
