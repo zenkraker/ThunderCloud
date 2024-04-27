@@ -9,7 +9,9 @@ services:
     depends_on:
       - db
     volumes:
-      - "C:/TestFiles:/app/uploads"    
+      - C://TestFiles:/app/uploads:rw    
+    environment:
+      DOTNET_USE_POLLING_FILE_WATCHER: true
 
   thunderclient.webapp:
     image: ${DOCKER_REGISTRY-}thunderclientwebapp
@@ -20,7 +22,7 @@ services:
       - thunderserver.api
 
   db:
-    image: postgres
+    image: postgres:16
     restart: always
     # set shared memory limit when using docker-compose
     shm_size: 128mb

@@ -3,9 +3,13 @@
     "Docker Compose": {
       "commandName": "DockerCompose",
       "commandVersion": "1.0",
+      "composeLaunchAction": "LaunchBrowser",
+      "composeLaunchServiceName": "thunderserver.api",
+      "composeLaunchUrl": "{Scheme}://localhost:{ServicePort}/swagger",
       "serviceActions": {
         "thunderserver.api": "StartDebugging",
-        "thunderclient.webapp": "StartDebugging"
+        "thunderclient.webapp": "StartDebugging",
+        "db": "StartWithoutDebugging"
       }
     }
   }
